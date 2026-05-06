@@ -1,0 +1,7 @@
+.c-search__autocomplete {
+  color: #0a3949;
+}
+
+.c-search__autocomplete::-webkit-scrollbar {
+  width: 8px;
+}

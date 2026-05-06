@@ -1,0 +1,21 @@
+.c-pokemon-comparison {
+  .c-pokemon-card {
+    width: 190px;
+    background: transparent;
+  }
+  .c-pokemon-comparison__card {
+    transition: background-color 0.5s ease;
+  }
+
+  .c-pokemon-comparison__card:hover {
+    background-color: rgba(201, 224, 234, 0.7);
+
+    .c-pokemon-card {
+      background: transparent;
+    }
+  }
+}
+
+.c-pokemon-comparison__container::-webkit-scrollbar {
+  width: 14px;
+}

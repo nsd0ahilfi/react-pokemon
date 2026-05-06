@@ -1,0 +1,9 @@
+{
+  "framework": "i18next",
+  "localesPaths": [
+    "src/assets/i18n"
+  ],
+  "sourceLanguage": "de",
+  "languages": ["en", "de"],
+  "namespace": false
+}
