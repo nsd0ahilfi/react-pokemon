@@ -10,6 +10,7 @@ import {
 import type { Pokemon, PokemonOverview } from "../../models";
 import PokemonCard from "../pokemon-card/PokemonCard.tsx";
 import "./PokemonComparison.css";
+import deleteIcon from "../../assets/delete.png";
 
 interface PokemonMinMaxStats {
   height: { min: number; max: number };
@@ -140,7 +141,7 @@ export default function PokemonComparison() {
                 )}
               </div>
               <img
-                src="/src/assets/delete.png"
+                src={deleteIcon}
                 alt="select all"
                 className="c-pokemon-list_select-all-icon cursor-pointer absolute right-[16px] bottom-[12px] w-[24px]"
                 onClick={(e) => onRemovePokemon(e, pokemon)}

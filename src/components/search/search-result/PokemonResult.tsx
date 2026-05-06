@@ -5,6 +5,7 @@ import { useGetPokemonQuery } from "../../../services/api/pokemonApi.ts";
 import PokemonCard from "../../pokemon-card/PokemonCard.tsx";
 import "./SearchResult.css";
 import type { PokemonState } from "../../../store/pokemon-slice.ts";
+import pokeballIcon from "../../../assets/pokeball.png";
 
 interface PokemonResultProps {
   searchTerm: string;
@@ -32,7 +33,7 @@ export default function PokemonResult(props: PokemonResultProps) {
     return (
       <ul className="c-pokemon-list grid grid-cols-5 gap-10 pb-6">
         <img
-          src="src/assets/pokeball.png"
+          src={pokeballIcon}
           alt="loading"
           className="c-search-result__loading-img"
         />

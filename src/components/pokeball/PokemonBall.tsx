@@ -8,6 +8,8 @@ import {
 } from "../../store/pokemon-slice.ts";
 import "./PokemonBall.css";
 import type { Pokemon } from "../../models";
+import pokeballIcon from "../../assets/pokeball.png";
+import openPokeballIcon from "../../assets/open-pokeball.png";
 
 interface ChildProps {
   closePokeball: () => void;
@@ -43,7 +45,7 @@ export default function PokemonBall({ closePokeball }: ChildProps) {
         <div className="flex justify-between mb-4 pb-3 border-b border-cyan-800">
           <div className="flex gap-4 items-center">
             <img
-              src="/src/assets/pokeball.png"
+              src={pokeballIcon}
               alt="pokeball"
               className="c-header__pokeball w-[32px]"
             />
@@ -93,7 +95,7 @@ export default function PokemonBall({ closePokeball }: ChildProps) {
                     onClick={(e) => onRemoveCatchedPokemon(e, pokemon.id)}
                   >
                     <img
-                      src="/src/assets/open-pokeball.png"
+                      src={openPokeballIcon}
                       alt="release pokemon"
                       className="w-[25px]"
                     />

@@ -13,6 +13,15 @@ import {
   setPokemonsToCompare,
   toggleCompareSelection,
 } from "../../store/pokemon-slice.ts";
+import sortAzIcon from "../../assets/sort_a_z.png";
+import sortZaIcon from "../../assets/sort_z_a.png";
+import sortUpIcon from "../../assets/sort_up.png";
+import sortDownIcon from "../../assets/sort_down.png";
+import graphIcon from "../../assets/graph.png";
+import deleteIcon from "../../assets/delete.png";
+import selectAllIcon from "../../assets/select-all.png";
+import uncheckedIcon from "../../assets/unchecked.png";
+import checkedIcon from "../../assets/checked.png";
 
 export default function PokemonList() {
   const [page, setPage] = useState(0);
@@ -135,9 +144,7 @@ export default function PokemonList() {
         <div className="flex mb-3 mt-5 gap-4 items-center">
           <h1 className="text-xl font-bold">{t("pokedex")}</h1>
           <img
-            src={
-              sortAsc ? "/src/assets/sort_a_z.png" : "src/assets/sort_z_a.png"
-            }
+            src={sortAsc ? sortAzIcon : sortZaIcon}
             alt="select all"
             className="c-pokemon-list_select-all-icon w-[32px] h-[32px] mt-[8px] rounded-[4px] cursor-pointer"
             onClick={() => {
@@ -145,9 +152,7 @@ export default function PokemonList() {
             }}
           />
           <img
-            src={
-              sortById ? "/src/assets/sort_up.png" : "src/assets/sort_down.png"
-            }
+            src={sortById ? sortUpIcon : sortDownIcon}
             alt="select all"
             className="c-pokemon-list_select-all-icon w-[32px] h-[32px] mt-[8px] rounded-[4px] cursor-pointer"
             onClick={() => sortNumerical()}
@@ -162,7 +167,7 @@ export default function PokemonList() {
               onClick={() => onNavigateToCompare()}
             >
               <img
-                src="/src/assets/graph.png"
+                src={graphIcon}
                 alt="compare"
                 className={`c-pokemon-list_compare-icon w-[24px] ${compareBtnDisabled ? "grayscale" : ""}`}
               />
@@ -175,11 +180,7 @@ export default function PokemonList() {
               onClick={() => handleSelectAll()}
             >
               <img
-                src={
-                  selectAll
-                    ? "/src/assets/delete.png"
-                    : "src/assets/select-all.png"
-                }
+                src={selectAll ? deleteIcon : selectAllIcon}
                 alt="select all"
                 className="c-pokemon-list_select-all-icon w-[24px]"
               />
@@ -193,11 +194,7 @@ export default function PokemonList() {
               cursor-pointer rounded-xl shadow-sm hover:outline-none hover:ring-2 hover:ring-cyan-800 flex gap-1"
           >
             <img
-              src={
-                selectionToggle
-                  ? "/src/assets/unchecked.png"
-                  : "/src/assets/checked.png"
-              }
+              src={selectionToggle ? uncheckedIcon : checkedIcon}
               alt="compare"
               className="c-pokemon-list_checkbox-icon w-[24px]"
             />
