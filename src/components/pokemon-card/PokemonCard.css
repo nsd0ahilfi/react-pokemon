@@ -1,0 +1,95 @@
+.c-pokemon-card {
+  background: white;
+  img {
+    padding: 12px;
+    transition: padding 0.3s ease;
+  }
+}
+
+.c-pokemon-card:not(.c-pokemon-card--selected):hover {
+  background-color: rgba(201, 224, 234, 0.7);
+}
+
+.c-pokemon-card--selection-started {
+  animation: cardWiggle 1.5s ease-in-out;
+}
+
+.c-pokemon-card--selected {
+  background: #e88a53db;
+}
+
+.c-pokemon-card:hover,
+.c-pokemon-comparison__card:hover .c-pokemon-card {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  img {
+    padding: 0 2px;
+  }
+
+  .c-pokemon-card__circle {
+    border-width: 20px;
+    border-color: #104e64;
+    outline: aliceblue auto 30px;
+    outline-offset: 10px;
+  }
+
+  .c-pokemon-card__title {
+    padding-left: 12px;
+    color: #0a3949;
+  }
+
+  .c-pokemon-card__title strong {
+    color: #0a3949;
+  }
+}
+
+.c-pokemon-card__circle {
+  border-color: #104e64;
+  outline: #104e64;
+  outline-offset: 3px;
+}
+
+.c-pokemon-card__circle,
+.c-pokemon-card,
+.c-pokemon-card__title,
+.c-pokemon-card__circle {
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+@keyframes cardWiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  20% {
+    transform: rotate(-1deg);
+  }
+  30% {
+    transform: rotate(1deg);
+  }
+  40% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  60% {
+    transform: rotate(-1deg);
+  }
+  70% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+  90% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
